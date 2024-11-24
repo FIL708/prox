@@ -3,6 +3,7 @@ import readline from 'readline';
 
 const variables = {
     PORT: '3000',
+    NODE_ENV: 'development',
 };
 
 const ENV_FILE = '.env';
