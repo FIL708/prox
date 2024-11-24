@@ -9,7 +9,8 @@
         "create-env": "node scripts/createEnv.js",
         "start": "node dist/app.js",
         "dev": "tsx watch src/app.ts",
-        "build": "tsc"
+        "build": "tsc",
+        "prepare": "husky install"
     },
     "keywords": [],
     "author": "",
@@ -19,9 +20,26 @@
         "express": "^4.21.1"
     },
     "devDependencies": {
+        "@eslint/js": "^9.15.0",
+        "@prettier/plugin-pug": "^3.2.0",
         "@types/express": "^5.0.0",
         "@types/node": "^22.9.3",
+        "eslint": "^9.15.0",
+        "eslint-config-prettier": "^9.1.0",
+        "globals": "^15.12.0",
+        "husky": "^8.0.0",
+        "lint-staged": "^15.2.10",
+        "prettier": "3.3.3",
         "tsx": "^4.19.2",
-        "typescript": "^5.7.2"
+        "typescript": "^5.7.2",
+        "typescript-eslint": "^8.15.0"
+    },
+    "lint-staged": {
+        "*.{js, jsx,ts,tsx}": [
+            "eslint --quiet --fix"
+        ],
+        "*.{json,js,ts,jsx,tsx,html,css}": [
+            "prettier --write --ignore-unknown"
+        ]
     }
 }

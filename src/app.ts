@@ -1,14 +1,14 @@
-import express, { Express, Request, Response } from "express";
-import dotenv from "dotenv";
+import express, { Express, Request, Response } from 'express';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
 const app: Express = express();
 
 const { PORT } = process.env;
-console.log("aasd")
-app.get("/", (req: Request, res: Response) => {
-    res.send("express");
+console.log('aasd');
+app.get('/', (req: Request, res: Response) => {
+    res.send('express');
 });
 
 app.listen(PORT, () => {

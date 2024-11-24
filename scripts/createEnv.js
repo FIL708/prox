@@ -1,20 +1,20 @@
-import fs from "fs";
-import readline from "readline";
+import fs from 'fs';
+import readline from 'readline';
 
 const variables = {
-    PORT: "3000",
+    PORT: '3000',
 };
 
-const ENV_FILE = ".env";
+const ENV_FILE = '.env';
 
-const RESET = "\x1b[0m";
-const BOLD = "\x1b[1m";
-const GREEN = "\x1b[32m";
-const RED = "\x1b[31m";
-const YELLOW = "\x1b[33m";
-const CHECKMARK = "✔️";
-const CROSSMARK = "❌";
-const INFO = "ℹ️";
+const RESET = '\x1b[0m';
+const BOLD = '\x1b[1m';
+const GREEN = '\x1b[32m';
+const RED = '\x1b[31m';
+const YELLOW = '\x1b[33m';
+const CHECKMARK = '✔️';
+const CROSSMARK = '❌';
+const INFO = 'ℹ️';
 
 const rl = readline.createInterface({
     input: process.stdin,
@@ -24,7 +24,7 @@ const rl = readline.createInterface({
 const createEnvFile = () => {
     const envContent = Object.entries(variables)
         .map(([key, value]) => `${key}=${value}`)
-        .join("\n");
+        .join('\n');
 
     fs.writeFileSync(ENV_FILE, envContent);
 
@@ -39,7 +39,7 @@ if (fs.existsSync(ENV_FILE)) {
     rl.question(
         `${YELLOW}${INFO} ${BOLD}The .env file already exists.${RESET} Do you want to overwrite it? (y/n): `,
         (overwrite) => {
-            if (overwrite.toLowerCase() !== "y") {
+            if (overwrite.toLowerCase() !== 'y') {
                 console.log(
                     `${RED}${CROSSMARK} ${BOLD}Operation canceled.${RESET} The .env file was not modified.`
                 );
