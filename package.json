@@ -2,11 +2,14 @@
     "name": "prox",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "src/app.js",
     "type": "module",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "create-env": "node scripts/createEnv.js"
+        "create-env": "node scripts/createEnv.js",
+        "start": "node dist/app.js",
+        "dev": "tsx watch src/app.ts",
+        "build": "tsc"
     },
     "keywords": [],
     "author": "",
@@ -14,5 +17,11 @@
     "dependencies": {
         "dotenv": "^16.4.5",
         "express": "^4.21.1"
+    },
+    "devDependencies": {
+        "@types/express": "^5.0.0",
+        "@types/node": "^22.9.3",
+        "tsx": "^4.19.2",
+        "typescript": "^5.7.2"
     }
 }
