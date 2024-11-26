@@ -8,7 +8,7 @@
         "test": "jest",
         "create-env": "node scripts/createEnv.js",
         "start": "node dist/app.js",
-        "dev": "tsx watch src/app.ts",
+        "dev": "node scripts/drawOnStart.js & npx tsx watch src/app.ts",
         "build": "tsc",
         "prepare": "husky install"
     },
