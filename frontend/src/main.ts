@@ -1,6 +1,6 @@
 console.log('INITIALIZATION');
 
-import.meta.glob(['./components/**/*.ts', '!./components/**/*.test.ts'], {
+import.meta.glob(['./components/**/*.ts', '!./components/**/*.spec.ts'], {
     eager: true,
 });
 

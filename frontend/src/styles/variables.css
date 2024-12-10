@@ -1,0 +1,83 @@
+:root {
+    /* Main colors */
+    --primary-color: #4a90e2;
+    --primary-color-hover: #3a78c2;
+    --secondary-color: #f5a623;
+    --secondary-color-hover: #e5951a;
+
+    /* Backgrounds */
+    --background-light: #ffffff;
+    --background-dark: #121212;
+
+    /* Surfaces (np. cards, sections) */
+    --surface-light: #f9f9f9;
+    --surface-dark: #1e1e1e;
+
+    /* Text */
+    --text-primary-light: #2c3e50;
+    --text-primary-dark: #ecf0f1;
+    --text-secondary-light: #7f8c8d;
+    --text-secondary-dark: #bdc3c7;
+
+    /* Info colors */
+    --error-color: #e74c3c;
+    --warning-color: #f1c40f;
+    --success-color: #2ecc71;
+
+    /* Shadows */
+    --box-shadow-light: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    --box-shadow-dark: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+
+    /* Border colors */
+    --border-color-light: #e1e1e1;
+    --border-color-dark: #333333;
+
+    /* Border radius */
+    --border-radius-small: 0.25rem;
+    --border-radius-medium: 0.5rem;
+    --border-radius-large: 0.75rem;
+
+    /* Interactions state */
+    --hover-opacity: 0.85;
+    --focus-ring-color-light: #4a90e2;
+    --focus-ring-color-dark: #4a90e2;
+
+    /* Text types */
+    --font-family: 'Roboto', sans-serif;
+    --font-size-small: 0.75rem; /* 12px */
+    --font-size-medium: 1rem; /* 16px */
+    --font-size-large: 1.25rem; /* 20px */
+    --font-size-xl: 1.5rem; /* 24px */
+    --font-size-xxl: 2rem; /* 32px */
+    --line-height: 1.5;
+
+    /* Font weight */
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-bold: 600;
+
+    /* Rest */
+    --transition-duration: 200ms;
+    --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+    --easing-decelerate: cubic-bezier(0, 0, 0.2, 1);
+    --easing-accelerate: cubic-bezier(0.4, 0, 1, 1);
+
+    /* Default light mode */
+    --background: var(--background-light);
+    --surface: var(--surface-light);
+    --text-primary: var(--text-primary-light);
+    --text-secondary: var(--text-secondary-light);
+    --box-shadow: var(--box-shadow-light);
+    --border-color: var(--border-color-light);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: var(--background-dark);
+        --surface: var(--surface-dark);
+        --text-primary: var(--text-primary-dark);
+        --text-secondary: var(--text-secondary-dark);
+        --box-shadow: var(--box-shadow-dark);
+        --border-color: var(--border-color-dark);
+    }
+}

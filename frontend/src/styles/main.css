@@ -1,0 +1,8 @@
+body {
+    background-color: var(--background);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    font-size: var(--font-size-medium);
+    transition: background-color var(--transition-duration)
+        var(--easing-standard);
+}
