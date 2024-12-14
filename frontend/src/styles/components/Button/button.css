@@ -1,3 +1,40 @@
+.btn,
+.btn-outline {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius-small);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.5px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition-duration);
+}
+
 .btn {
-    border: 1px solid palevioletred;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+.btn:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.btn-outline {
+    background-color: var(--surface);
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--surface-hover);
+}
+
+.btn.sm,
+.btn-outline.sm {
+    padding: 0.15rem 0.3rem;
+    font-size: var(--font-size-small);
+}
+
+.btn.xl,
+.btn-outline.xl {
+    padding: 0.3rem 0.6rem;
+    font-size: var(--font-size-xl);
 }

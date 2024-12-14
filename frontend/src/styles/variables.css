@@ -11,7 +11,9 @@
 
     /* Surfaces (np. cards, sections) */
     --surface-light: #f9f9f9;
+    --surface-light-hover: #dad7d7;
     --surface-dark: #1e1e1e;
+    --surface-dark-hover: #242424;
 
     /* Text */
     --text-primary-light: #2c3e50;
@@ -44,7 +46,7 @@
 
     /* Text types */
     --font-family: 'Roboto', sans-serif;
-    --font-size-small: 0.75rem; /* 12px */
+    --font-size-small: 0.8rem; /* 12px */
     --font-size-medium: 1rem; /* 16px */
     --font-size-large: 1.25rem; /* 20px */
     --font-size-xl: 1.5rem; /* 24px */
@@ -54,6 +56,7 @@
     /* Font weight */
     --font-weight-light: 300;
     --font-weight-regular: 400;
+    --font-weight-medium: 500;
     --font-weight-bold: 600;
 
     /* Rest */
@@ -75,6 +78,7 @@
     :root {
         --background: var(--background-dark);
         --surface: var(--surface-dark);
+        --surface-hover: var(--surface-dark-hover);
         --text-primary: var(--text-primary-dark);
         --text-secondary: var(--text-secondary-dark);
         --box-shadow: var(--box-shadow-dark);
