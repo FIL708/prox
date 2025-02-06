@@ -1,17 +1,12 @@
-import express, { Express, Request, Response } from 'express';
-import dotenv from 'dotenv';
-import { logger } from './utils/logger';
+import express, { Application, Request, Response } from 'express';
+import routes from './pages';
 
-dotenv.config();
+const app: Application = express();
 
-const app: Express = express();
+app.use(routes);
 
-const { PORT } = process.env;
-
-app.get('/', (req: Request, res: Response) => {
-    res.send('express');
+app.use('/test', (req: Request, res: Response): void => {
+    res.json({ message: 'Allo! Catch-all route.' });
 });
 
-app.listen(PORT, () => {
-    logger.info(`Server is running at http://localhost:${PORT}`);
-});
+export default app;
