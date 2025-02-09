@@ -1,8 +1,9 @@
 .btn,
-.btn-outline {
+.btn-outline,
+.btn-text {
     padding: 0.25rem 0.5rem;
     border: 1px solid var(--primary-color);
-    border-radius: var(--border-radius-small);
+    border-radius: var(--border-radius-medium);
     font-weight: var(--font-weight-medium);
     letter-spacing: 0.5px;
     box-shadow: var(--box-shadow);
@@ -27,14 +28,27 @@
     background-color: var(--surface-hover);
 }
 
+.btn-text {
+    border-color: transparent;
+    background-color: transparent;
+    color: var(--primary-color);
+    box-shadow: none;
+}
+
+.btn-text:hover {
+    color: var(--primary-color-hover);
+}
+
 .btn.sm,
-.btn-outline.sm {
+.btn-outline.sm,
+.btn-text.sm {
     padding: 0.15rem 0.3rem;
     font-size: var(--font-size-small);
+    font-weight: var(--font-weight-medium);
 }
 
 .btn.xl,
-.btn-outline.xl {
-    padding: 0.3rem 0.6rem;
+.btn-outline.xl .btn-text.xl {
+    padding: 0.25rem 0.8rem;
     font-size: var(--font-size-xl);
 }

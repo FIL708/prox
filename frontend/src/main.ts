@@ -5,7 +5,10 @@ const scripts = import.meta.glob(
     }
 );
 
-const styles = import.meta.glob('./styles/**/*.css', { eager: true });
+const styles = import.meta.glob(
+    ['./styles/**/*.css', './components/**/*.css'],
+    { eager: true }
+);
 
 console.log(
     `
